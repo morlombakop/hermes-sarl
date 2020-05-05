@@ -1,0 +1,15 @@
+.app-header {
+  background-color: transparent;
+  position: fixed;
+  color: #FFF;
+
+  button {
+    .mat-h3 {
+      text-transform: capitalize;
+    }
+  }
+
+  .fill {
+    flex: 1 1 auto;
+  }
+}
