@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,17 +6,21 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  hasScrolled = false;
   @Input() onMenuClick = () => {};
-
-  constructor(
-    // private jwtService: JwtService,
-    // private identityService: IdentityService,
-    // private router: Router,
-  ) {}
 
   handleMenuClick() {
     if (this.onMenuClick) {
       this.onMenuClick();
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onVerticalScroll(event: WindowEventHandlers) {
+    if (window.pageYOffset > 100 && this.hasScrolled === false) {
+      this.hasScrolled = true;
+    } else if (window.pageYOffset < 100 && this.hasScrolled === true) {
+      this.hasScrolled = false;
     }
   }
 }

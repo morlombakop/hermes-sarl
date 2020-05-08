@@ -1,7 +1,9 @@
+@import '../../styles/variables';
+
 .app-header {
   background-color: transparent;
   position: fixed;
-  color: #FFF;
+  color: #FFFF;
 
   button {
     .mat-h3 {
@@ -11,5 +13,10 @@
 
   .fill {
     flex: 1 1 auto;
+  }
+
+  &.scrolled {
+    background-color: $color-blue;
+    color: #f5f5f5;
   }
 }

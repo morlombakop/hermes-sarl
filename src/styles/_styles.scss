@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import './variables';
 
 html,
 body {
@@ -15,5 +15,16 @@ body {
 }
 
 .text-primary {
-  color: #1277DD;
+  color:$color-blue;
 }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding: 50px 20px;
+  max-width: 1000px;
+}
+
