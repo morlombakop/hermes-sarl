@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderModule } from './header/header.module';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AboutModule } from './about/about.module';
     HeaderModule,
     HomeModule,
     AboutModule,
+    ProductsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,6 +8,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: #eee;
 }
 
 .text-center {
@@ -15,7 +16,7 @@ body {
 }
 
 .text-primary {
-  color:$color-blue;
+  color: $color-blue;
 }
 
 .flex-center {
@@ -24,7 +25,14 @@ body {
 }
 
 .container {
-  padding: 50px 20px;
+  padding: 80px 20px;
   max-width: 1000px;
 }
 
+.parallax {
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+
+.product {
+  .safe-cabinet {
+    background-image: url('../../assets/coffre-armoire.jpg');
+  }
+
+  .strong-doors-locksmiths {
+    background-image: url('../../assets/bank-vault.jpg');
+  }
+
+  .banking-machines {
+    background-image: url('../../assets/détecteur-de-faux-billet.jpeg');
+  }
+
+  .industrial-appliances {
+    background-image: url('../../assets/strapping-machine.jpg');
+  }
+
+  .cctv-systems {
+    background-image: url('../../assets/cctv.jpeg');
+  }
+}
