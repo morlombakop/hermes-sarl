@@ -2,11 +2,11 @@ import { Product } from './types';
 
 export const products: Product[] = [
   {
-    title: 'Coffre Fort',
+    title: 'Coffre-fort',
     image: './assets/safe-hermes.jpg',
   },
   {
-    title: 'Porte forte',
+    title: 'Porte Forte',
     image: './assets/bank-vault.jpg',
   },
   {
@@ -18,19 +18,19 @@ export const products: Product[] = [
     image: './assets/banknote-counter.jpg',
   },
   {
-    title: 'Detecteur de Faux Billets',
+    title: 'Détecteur de Faux Billets',
     image: './assets/détecteur-de-faux-billet.jpg',
   },
   {
-    title: 'Machine a Affranchir',
+    title: 'Machine à Affranchir',
     image: './assets/affranchiseuse.jpg',
   },
   {
-    title: 'Machine a Gaufrer',
+    title: 'Machine à Gaufrer',
     image: './assets/stamping.jpg',
   },
   {
-    title: 'Systeme de Videosurveillance',
+    title: 'Système de Vidéosurveillance',
     image: './assets/cctv.jpg',
   },
   {
@@ -42,7 +42,7 @@ export const products: Product[] = [
     image: './assets/sac-transport.jpg',
   },
   {
-    title: 'Guiche Automatique (DAB)',
+    title: 'Guichet Automatique (DAB)',
     image: './assets/atm.jpg',
   },
   {

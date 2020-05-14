@@ -1,12 +1,10 @@
 <div id="product" class="product flex-center">
   <div class="product-container">
-    <h1 class="section-title">our products</h1>
-    <div>
-      <mat-grid-list cols="3" rowHeight="400px">
-        <mat-grid-tile *ngFor="let product of products">
-          <app-product-card [title]="product.title" [image]="product.image"></app-product-card>
-        </mat-grid-tile>
-      </mat-grid-list>
-    </div>
+    <h1 class="section-title">Produits</h1>
+    <mat-grid-list cols="3" rowHeight="400px">
+      <mat-grid-tile *ngFor="let product of products">
+        <app-product-card [title]="product.title" [image]="product.image"></app-product-card>
+      </mat-grid-tile>
+    </mat-grid-list>
   </div>
 </div>
