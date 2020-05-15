@@ -1,31 +1,84 @@
-<div id="contact" class="contact">
+<div id="contact" class="contact ">
   <h1 class="section-title">Contact</h1>
-  <mat-grid-list cols="2" rowHeight="400px">
-    <mat-grid-tile>
+  <div class="flex-center">
+    <div class="contact-general">
+      Nous sommes toujours à l'écoute et prêts à vous servir, n'hésitez pas à nous contacter pour une facture pro
+      format,
+      un devis, ou une tasse de café.
+      <ul>
+        <li>
+          <mat-icon>room</mat-icon><span>Rue Ngosso Din Bali, 18580 Douala Cameroon</span>
+        </li>
+        <li>
+          <mat-icon>phone</mat-icon><span>(+237) 233 42 30 43 / (+237) 674 83 22 60 </span>
+        </li>
+        <li>
+          <mat-icon>mail</mat-icon><span>hermes_sarl@yahoo.fr</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <mat-grid-list cols="5" rowHeight="720px">
+    <mat-grid-tile [colspan]="2">
       <div class="contact-form">
-        Nous sommes toujours à l'écoute et prêts à servir, n'hésitez pas à nous contacter pour une facture pro format, un devis, ou une tasse de café.
-        <ul>
-          <li><mat-icon>room</mat-icon><span>Rue Ngosso Din Bali, 18580 Douala Cameroon</span></li>
-          <li><mat-icon>phone</mat-icon><span>(+237) 233 42 30 43 / (+237) 674 83 22 60 </span></li>
-          <li><mat-icon>mail</mat-icon><span>hermes_sarl@yahoo.fr</span></li>
-        </ul>
-        <h4>Formulaire de Contact</h4>
-        <form>
-          <mat-form-field class="example-full-width">
-            <mat-label>Email</mat-label>
-            <input matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
-            <!-- <input matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com"> -->
-            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-              Please enter a valid email address
-            </mat-error>
-            <mat-error *ngIf="emailFormControl.hasError('required')">
-              Email is <strong>required</strong>
-            </mat-error>
-          </mat-form-field>
+        <h2>Formulaire de Contact</h2>
+        <form [formGroup]="contactForm">
+          <div class="form-group">
+            <label for="title">Titre</label>
+            <input id="title" class="form-control" placeholder="Mr, Me, Mll" formControlName="title">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Adresse Électronique</label>
+            <input id="email" class="form-control" placeholder="johdoe@example.com" formControlName="email" required>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+              <div *ngIf="email.errors.required">
+                L'adresse électronique est obligatoire.
+              </div>
+              <div *ngIf="email.errors.email">L'adresse électronique n'est pas valide</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="firstName">Prénom</label>
+            <input id="firstName" class="form-control" placeholder="John" formControlName="firstName">
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Nom </label>
+            <input id="lastName" class="form-control" placeholder="Doe" formControlName="lastName">
+          </div>
+
+          <div class="form-group">
+            <label for="company">Entreprise </label>
+            <input id="company" class="form-control" placeholder="Example SA" formControlName="company">
+          </div>
+
+          <div class="form-group">
+            <label for="phoneNumber">Numéro de Telephone </label>
+            <input id="phoneNumber" class="form-control" placeholder="+237 678 79 98 35" formControlName="phoneNumber">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" class="form-control" placeholder="Votre message ici"
+              formControlName="message" required></textarea>
+            <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error">
+              <div *ngIf="message.errors.required">
+                Le message est obligatoire.
+              </div>
+            </div>
+          </div>
+          <div class="contact-action">
+            <button title="products" mat-flat-button color="primary" aria-label="products button">
+              <mat-icon>send</mat-icon>
+              <span i18n class="mat-h3"> Envoyer</span>
+            </button>
+          </div>
         </form>
       </div>
     </mat-grid-tile>
-    <mat-grid-tile>
+    <mat-grid-tile [colspan]="3">
       <div class="contact-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.8715464231054!2d9.697567915326061!3d4.046620348106846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061128cf840bf9b%3A0x404f7017909f8ddb!2sAlimentation%20Papa%20Maka%2C%20Douala!5e0!3m2!1sen!2sde!4v1589199589685!5m2!1sen!2sde"

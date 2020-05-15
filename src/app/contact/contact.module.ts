@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ContactComponent } from './contact.component';
 
 @NgModule({
-  imports: [MatGridListModule, MatInputModule, FormsModule, ReactiveFormsModule, MatIconModule],
+  imports: [CommonModule, MatGridListModule, FormsModule, ReactiveFormsModule, MatIconModule, MatButtonModule],
   declarations: [ContactComponent],
   exports: [ContactComponent],
 })

@@ -1,8 +1,12 @@
+@import '../../styles/variables';
+
 .contact {
   padding-top: 50px;
-  &-map{
+
+  &-map {
     height: 100%;
     width: 100%;
+
     iframe {
       width: 100%;
       height: 100%;
@@ -10,10 +14,69 @@
   }
 
   &-form {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
+    flex: 1;
   }
 
-  ul li {
-    list-style: none;
+  &-general {
+    flex: 1;
+    max-width: 1000px;
+    padding: 0 20px 20px 20px;
+  }
+
+  &-action {
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+
+    .mat-flat-button {
+      border-radius: 0;
+      &.mat-primary{
+        background-color: $color-blue;
+      }
+    }
+  }
+
+  h2 {
+    padding-top: 20px;
+  }
+
+  ul {
+    .mat-icon {
+      color: $color-blue;
+    }
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    span {
+      padding-left: 10px;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+
+    label {
+      padding-bottom: 5px;
+    }
+
+    .form-control {
+      padding: 10px 15px;
+    }
+
+    .error {
+      background-color: lighten($color: $color-red, $amount: 30);
+      padding: 10px;
+      color: darken($color: $color-red, $amount: 30);
+      font-size: 0.8em;
+    }
   }
 }
