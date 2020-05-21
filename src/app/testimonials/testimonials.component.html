@@ -1,5 +1,20 @@
 <div id="testimonials" class="flex-center testimonials">
   <div class="container">
     <h1 class="section-title">témoignages</h1>
+
+    Nous avons servi et nous servons de nombreuses entreprises de la sous-région.
+    Elles apprécient notre professionnalisme et la qualité de nos produits. Voici ce qu'elles pensent de nous. 
+
+    <div class="flex-center">
+      <div class="testimonials-container">
+        <fa-icon [icon]="faQuoteLeft" size="1x"></fa-icon>
+        <span class="testimonials-message">{{ testimonial.message }}</span>
+        <fa-icon [icon]="faQuoteRight" size="1x"></fa-icon>
+        <div class="testimonials-author">
+          <span>{{ testimonial.author }}</span><br/>
+          <span>{{ testimonial.function }}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

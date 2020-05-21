@@ -1,4 +1,4 @@
-import { Product } from './types';
+import { Product } from '../types';
 
 export const products: Product[] = [
   {
@@ -53,4 +53,8 @@ export const products: Product[] = [
     title: 'Caisse Escamotable',
     image: './assets/caisse-escamotable.jpg',
   },
+  {
+    title: 'Horodateur - Marqueur de Texte',
+    image: './assets/horodateur.jpg',
+  }
 ];

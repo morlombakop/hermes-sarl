@@ -10,6 +10,7 @@ import { AboutModule } from './about/about.module';
 import { ProductsModule } from './products/products.module';
 import { TestimonialsModule } from './testimonials/testimonials.module';
 import { ContactModule } from './contact/contact.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ContactModule } from './contact/contact.module';
     ProductsModule,
     TestimonialsModule,
     ContactModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

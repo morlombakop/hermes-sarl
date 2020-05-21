@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { TestimonialsComponent } from './testimonials.component';
 
 @NgModule({
-  imports: [],
+  imports: [FontAwesomeModule],
   declarations: [TestimonialsComponent],
   exports: [TestimonialsComponent],
 })

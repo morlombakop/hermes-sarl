@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+.testimonials {
+  background-color: $color-blue;
+  color: #fff;
+
+  .section-title {
+    color: #fff;
+  }
+  &-container {
+    margin-top: 40px;
+    max-width: 450px;
+    padding: 0 15px 15px 15px;
+    text-align: center;
+  }
+
+  &-message {
+    padding: 0 10px;
+    font-size: 1.5em;
+    font-style: italic;
+  }
+
+  &-author{
+padding-top: 20px;
+  }
+}
