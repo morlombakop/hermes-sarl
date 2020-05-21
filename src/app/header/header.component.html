@@ -1,25 +1,27 @@
 <mat-toolbar class="app-header" [ngClass]="{'scrolled mat-elevation-z4' : hasScrolled }">
-  <!-- <button mat-icon-button aria-label="Side navigation toggle button" (click)="handleMenuClick()">
-    <mat-icon size="35">menu</mat-icon>
-  </button> -->
-  <button mat-button aria-label="Home button">
+  <button  (click)="handleMenuClick('home')" mat-button aria-label="Home button">
     <span class="mat-h1">Hermes Sarl</span>
   </button>
   <span class="fill"></span>
-  <button title="about" mat-button aria-label="about button">
-    <mat-icon>work</mat-icon>
-    <span i18n class="mat-h3"> A Propos</span>
+  <button *ngIf="isSmallScreen" mat-icon-button aria-label="Side navigation toggle button" > <!-- (click)="handleMenuClick()" -->
+    <mat-icon size="35">menu</mat-icon>
   </button>
-  <button title="products" mat-button aria-label="products button">
-    <mat-icon>view_quilt</mat-icon>
-    <span i18n class="mat-h3"> produits</span>
-  </button>
-  <button title="testimonial" mat-button aria-label="testimonials button">
-    <mat-icon>chat</mat-icon>
-    <span i18n class="mat-h3"> témoignages</span>
-  </button>
-  <button title="contact us" mat-button aria-label="contact us button">
-    <mat-icon>phone</mat-icon>
-    <span i18n class="mat-h3"> contact</span>
-  </button>
+  <ng-container *ngIf="!isSmallScreen">
+    <button (click)="handleMenuClick('about')" title="about" mat-button aria-label="about button">
+      <mat-icon>work</mat-icon>
+      <span i18n class="mat-h3"> A Propos</span>
+    </button>
+    <button (click)="handleMenuClick('products')" title="products" mat-button aria-label="products button">
+      <mat-icon>view_quilt</mat-icon>
+      <span i18n class="mat-h3"> produits</span>
+    </button>
+    <button (click)="handleMenuClick('testimonials')" title="testimonial" mat-button aria-label="testimonials button">
+      <mat-icon>chat</mat-icon>
+      <span i18n class="mat-h3"> témoignages</span>
+    </button>
+    <button  (click)="handleMenuClick('contact')" title="contact us" mat-button aria-label="contact us button">
+      <mat-icon>phone</mat-icon>
+      <span i18n class="mat-h3"> contact</span>
+    </button>
+  </ng-container>
 </mat-toolbar>

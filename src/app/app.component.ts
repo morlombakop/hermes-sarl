@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
@@ -6,7 +6,7 @@ import { DOCUMENT } from '@angular/common';
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'hermes-sarl';
   private document: Document;
 
@@ -14,12 +14,10 @@ export class AppComponent implements AfterViewInit {
     this.document = document;
  }
 
-  ngAfterViewInit() {
-    setTimeout(function(){
-      const element =  this.document.getElementById('contact');
-      const wind = this.document.defaultView;
-      const y = element.getBoundingClientRect().top + wind.pageYOffset - 40;
-      wind.scrollTo({ top: y, behavior: 'smooth' });
-     }.bind(this), 2000);
+  onMenuClick = (sectionId: string) => {
+    const element =  this.document.getElementById(sectionId);
+    const wind = this.document.defaultView;
+    const position = element.getBoundingClientRect().top + wind.pageYOffset - 50;
+    wind.scrollTo({ top: position, behavior: 'smooth' });
   }
 }
