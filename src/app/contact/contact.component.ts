@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 @Component({
@@ -7,19 +7,13 @@ import { FormControl, Validators, FormGroup } from '@angular/forms';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  // contact = {
-  //   title: '',
-  //   firstName: '',
-  //   lastName: '',
-  //   company: '',
-  //   email: '',
-  //   phoneNumber: '',
-  //   message: '',
-  // };
-
+  @Input() isSmallAndBelow = false;
   contactForm: FormGroup;
+  cols = 5;
+  formColspan = 2;
+  mapColspan = 3;
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.contactForm = new FormGroup({
       title: new FormControl(),
       email: new FormControl(null, [Validators.required, Validators.email]),
@@ -29,6 +23,12 @@ export class ContactComponent implements OnInit {
       phoneNumber: new FormControl(),
       message: new FormControl('', [Validators.required]),
     });
+
+    if (this.isSmallAndBelow) {
+      this.cols = 1;
+      this.formColspan = 1;
+      this.mapColspan = 1;
+    }
 
     // this.contactForm.valueChanges.subscribe((data) => console.log(data));
   }

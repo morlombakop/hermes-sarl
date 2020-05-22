@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from '@angular/cdk/layout';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HeaderModule } from './header/header.module';
 import { HomeModule } from './home/home.module';
@@ -10,7 +12,6 @@ import { AboutModule } from './about/about.module';
 import { ProductsModule } from './products/products.module';
 import { TestimonialsModule } from './testimonials/testimonials.module';
 import { ContactModule } from './contact/contact.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     TestimonialsModule,
     ContactModule,
     FontAwesomeModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

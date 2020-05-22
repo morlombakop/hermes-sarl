@@ -1,10 +1,11 @@
-<div id="contact" class="contact ">
+<div id="contact" class="contact" [ngClass]="{'small' : isSmallAndBelow }">
   <h1 class="section-title">Contact</h1>
   <div class="flex-center">
     <div class="contact-general">
-      Nous sommes toujours à l'écoute et prêts à vous servir, n'hésitez pas à nous contacter pour une facture pro
-      format,
-      un devis, ou une tasse de café.
+      <p class="text-justify">
+        Nous sommes toujours à l'écoute et prêts à vous servir, n'hésitez pas à nous contacter pour une facture pro
+        format, un devis, ou une tasse de café.
+      </p>
       <ul>
         <li>
           <mat-icon>room</mat-icon><span>Rue Ngosso Din Bali, 18580 Douala Cameroon</span>
@@ -18,8 +19,8 @@
       </ul>
     </div>
   </div>
-  <mat-grid-list cols="5" rowHeight="720px">
-    <mat-grid-tile [colspan]="2">
+  <mat-grid-list [cols]="cols" rowHeight="720px">
+    <mat-grid-tile [colspan]="formColspan">
       <div class="contact-form">
         <h2>Formulaire de Contact</h2>
         <form [formGroup]="contactForm">
@@ -78,7 +79,7 @@
         </form>
       </div>
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="3">
+    <mat-grid-tile [colspan]="mapColspan">
       <div class="contact-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.8715464231054!2d9.697567915326061!3d4.046620348106846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061128cf840bf9b%3A0x404f7017909f8ddb!2sAlimentation%20Papa%20Maka%2C%20Douala!5e0!3m2!1sen!2sde!4v1589199589685!5m2!1sen!2sde"

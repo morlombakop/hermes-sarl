@@ -1,6 +1,6 @@
-<app-header [onMenuClick]="onMenuClick"></app-header>
-<app-home></app-home>
+<app-header [onMenuClick]="onMenuClick" [isSmallAndBelow]="isSmallAndBelow"></app-header>
+<app-home [isXSmall]="isXSmall"></app-home>
 <app-about></app-about>
-<app-products></app-products>
+<app-products [isXSmallScreen]="isXSmall" [isSmallScreen]="isSmall"></app-products>
 <app-testimonials></app-testimonials>
-<app-contact></app-contact>
+<app-contact [isSmallAndBelow]="isSmallAndBelow"></app-contact>

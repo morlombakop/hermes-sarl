@@ -3,10 +3,32 @@
     <span class="mat-h1">Hermes Sarl</span>
   </button>
   <span class="fill"></span>
-  <button *ngIf="isSmallScreen" mat-icon-button aria-label="Side navigation toggle button" > <!-- (click)="handleMenuClick()" -->
+
+  <!-- Mobile navigation-->
+  <button *ngIf="isSmallAndBelow" [matMenuTriggerFor]="menu" mat-icon-button aria-label="Side navigation toggle button" > <!-- (click)="handleMenuClick()" -->
     <mat-icon size="35">menu</mat-icon>
   </button>
-  <ng-container *ngIf="!isSmallScreen">
+  <mat-menu #menu="matMenu">
+    <button (click)="handleMenuClick('about')" title="about" mat-menu-item aria-label="about button">
+      <mat-icon>work</mat-icon>
+      <span i18n class="mat-h3"> A Propos</span>
+    </button>
+    <button (click)="handleMenuClick('products')" title="products" mat-menu-item aria-label="products button">
+      <mat-icon>view_quilt</mat-icon>
+      <span i18n class="mat-h3"> produits</span>
+    </button>
+    <button (click)="handleMenuClick('testimonials')" title="testimonial" mat-menu-item aria-label="testimonials button">
+      <mat-icon>chat</mat-icon>
+      <span i18n class="mat-h3"> témoignages</span>
+    </button>
+    <button  (click)="handleMenuClick('contact')" title="contact us" mat-menu-item aria-label="contact us button">
+      <mat-icon>phone</mat-icon>
+      <span i18n class="mat-h3"> contact</span>
+    </button>
+  </mat-menu>
+
+  <!-- Desktop navigation-->
+  <ng-container *ngIf="!isSmallAndBelow">
     <button (click)="handleMenuClick('about')" title="about" mat-button aria-label="about button">
       <mat-icon>work</mat-icon>
       <span i18n class="mat-h3"> A Propos</span>

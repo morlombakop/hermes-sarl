@@ -1,25 +1,16 @@
-import { Component, Input, HostListener, OnInit } from '@angular/core';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import { Component, Input, HostListener } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   hasScrolled = false;
-  isSmallScreen: boolean;
+  @Input() isSmallAndBelow = false;
   @Input() onMenuClick = (sectionId: string) => {};
 
-  constructor(breakpointObserver: BreakpointObserver){
-    // console.log(Breakpoints.Small);
-    this.isSmallScreen = breakpointObserver.isMatched(Breakpoints.XSmall);
-    console.log(this.isSmallScreen);
-  }
-
-  ngOnInit(){
-    // const isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
-  }
 
   handleMenuClick(sectionId: string) {
     if (this.onMenuClick) {

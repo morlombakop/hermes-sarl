@@ -11,5 +11,19 @@
 
   h1 {
     font-size: 2em;
+    text-align: center;
+  }
+
+  .motto {
+    display: table;
+   background-color:  rgba(0,0,0,0.3);
+    padding: 30px 30px 10px 30px;
+  }
+
+  &.xsmall {
+    h1 {
+      font-size: 1.5em;
+      margin: 0 0 10px;
+    }
   }
 }

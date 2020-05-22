@@ -59,6 +59,12 @@
     }
   }
 
+  &.small {
+    ul {
+      padding-inline-start: 0;
+    }
+  }
+
   .form-group {
     display: flex;
     flex-direction: column;
