@@ -3,15 +3,15 @@ import { Product } from '../types';
 export const products: Product[] = [
   {
     title: 'Coffre-fort',
-    image: './assets/safe-hermes.jpg',
+    image: './assets/ferrimax-coffre.jpg',
   },
   {
     title: 'Porte Forte',
-    image: './assets/bank-vault.jpg',
+    image: './assets/ferrimax-vault.jpg',
   },
   {
     title: 'Armoire Forte',
-    image: './assets/armoire-forte.jpg',
+    image: './assets/ferrimax-armoire.jpg',
   },
   {
     title: 'Compteuse de Billets',
